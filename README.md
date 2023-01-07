@@ -31,27 +31,27 @@ apt-get install default-jdk gnupg gnupg2 gnupg1
 [1] wget -O - https://debian.opennms.org/OPENNMS-GPG-KEY | sudo apt-key add -
 [2] echo "deb https://debian.opennms.org/ stable main" | sudo tee /etc/apt/sources.list.d/opennms.list 
 ```
-<p align="center"><img src="Images/image3.png"width=500></p>
+<p align="center"><img src="Images/image3.png"width=700></p>
 
 4. ทำการอัพเดท Packages อีกครั้ง โดยใช้คำสั่งดังนี้
 ```md
 apt upmonitoring
 ```
-<p align="center"><img src="Images/image4.png"width=500></p>
+<p align="center"><img src="Images/image4.png"width=700></p>
 
 5. เข้าสู่การติดตั้ง OpenNMS จะใช้คำสั่งดังนี้เพื่อติดตั้ง Package ของ OpenNMS เมื่อติดตั้งสำเร็จแล้ว จะได้ผลลัพธ์ตามรูปภาพด้านล่าง
 ```md
 apt install opennms
 ```
-<p align="center"><img src="Images/image5.png"width=500></p>
+<p align="center"><img src="Images/image5.png"width=700></p>
 
-<p align="center"><img src="Images/image6.png"width=500></p>
+<p align="center"><img src="Images/image6.png"width=700></p>
 
-<p align="center"><img src="Images/image7.png"width=500></p>
+<p align="center"><img src="Images/image7.png"width=700></p>
 
-<p align="center"><img src="Images/image8.png"width=500></p>
+<p align="center"><img src="Images/image8.png"width=700></p>
 
-<p align="center"><img src="Images/image9.png"width=500></p>
+<p align="center"><img src="Images/image9.png"width=700></p>
 
 <a name="installpostgres"></a>
 ## ขั้นตอนที่ 2 - ติดตั้ง PostgreSQL
@@ -64,7 +64,7 @@ systemctl status postgresql
 ```md
 apt install postgresql
 ```
-<p align="center"><img src="Images/image10.png"width=500></p>
+<p align="center"><img src="Images/image10.png"width=600></p>
 
 2. สร้างฐานข้อมูล โดยใช้คำสั่งตามลำดับดังนี้
 ```md
@@ -92,7 +92,7 @@ createdb -O opennms -E UTF-8 -T template0 opennms       //สร้างฐา�
 ```md
 psql -c "ALTER USER postgres WITH PASSWORD '<YOUR-POSTGRES-PASSWORD>';"
 ```
-<p align="center"><img src="Images/image12.png"width=500></p>
+<p align="center"><img src="Images/image12.png"width=600></p>
 
 4. หลังจากทำการเซ็ต Password ของฐานข้อมูลเสร็จสิ้น ใช้คำสั่ง exit และ ทำการแก้ไขไฟล์ opennms-datasources.xml โดยใช้ nano ดังคำสั่งดังนี้
 ```md
@@ -144,14 +144,14 @@ ufw reload                  //รีโหลด UFW
 1. เปิด VPN ที่ทำการเชื่อมต่อกับ Server ของ OpenNMS และเข้าสู่หน้าเว็บไซต์ โดยทำตามขั้นตอนดังนี้
 - http://<ip เครื่องที่ลง opennms>:8980/opennms
 - ในการเข้าสู่ระบบจะใช้
-    - Username : admin
-    - Password : admin
+    - **Username** : admin
+    - **Password** : admin
 
-<p align="center"><img src="Images/image19.png"width=500></p>
+<p align="center"><img src="Images/image19.png"width=700></p>
 
 2. กด Opt-in เพื่อส่งสถิติการใช้ opennms แก่ OpenNMS Statistics เพื่อช่วยเหลือในการปรับปรุงซอฟแวร์
 
-<p align="center"><img src="Images/image20.png"width=500></p>
+<p align="center"><img src="Images/image20.png"width=700></p>
 
 <a name="serveremail"></a>
 ## ขั้นตอนที่ 5 - การติดตั้ง Server E-mail ในการส่งการแจ้งเตือน
@@ -172,11 +172,11 @@ systemctl status sendmail
 
 1. ให้ทำการกดที่เครื่องหมาย + (ตามวงกลมสีแดง)
 
-<p align="center"><img src="Images/image22.png"width=500></p>
+<p align="center"><img src="Images/image22.png"width=700></p>
 
 2. กรอกข้อมูลตามตัว Client ที่จะต้องการ Monitor
 
-<p align="center"><img src="Images/image24.png"width=500></p>
+<p align="center"><img src="Images/image24.png"width=700></p>
 
 - **ส่วนที่สำคัญ**
     - **Requisition** สำหรับจัดหมวดหมู่การร้องขอเข้า Monitor ระบบเริ่มต้นจะมีให้เลือกแค่ selfmonitor โดยผู้ใช้สามารถเพิ่มหรือตั้งค่าเองได้
@@ -191,74 +191,74 @@ systemctl status sendmail
 
 1. ให้เลือกที่แท็บ Info (วงกลมสีแดง) และเลือก Node (วงกลมสีน้ำเงิน)
 
-<p align="center"><img src="Images/image25.png"width=500></p>
+<p align="center"><img src="Images/image25.png"width=700></p>
 
 2. เลือก Node ที่ต้องการ
 
-<p align="center"><img src="Images/image26.png"width=500></p>
+<p align="center"><img src="Images/image26.png"width=700></p>
 
 3. การแสดงข้อมูล Node ในการอ่านผลของข้อมูล หลักๆนั้น จะเป็นการทำงานของ **SNMP** ว่ายังใช้งานอยู่หรือไม่
 
-<p align="center"><img src="Images/image27.png"width=500></p>
+<p align="center"><img src="Images/image27.png"width=700></p>
 
 <a name="setting"></a>
 ### การตั้งค่าหมวดหมู่
 
 1. เข้าไปที่การตั้งค่า (วงกลมสีแดง)
 
-<p align="center"><img src="Images/image28.png"width=500></p>
+<p align="center"><img src="Images/image28.png"width=700></p>
 
 2. เข้าที่เมนู Manage Surveillance Categories
 
-<p align="center"><img src="Images/image29.png"width=500></p>
+<p align="center"><img src="Images/image29.png"width=700></p>
 
 3. สามารถทำการใส่ชื่อและเพิ่มหมวดหมู่ได้เลย
 
-<p align="center"><img src="Images/image30.png"width=500></p>
+<p align="center"><img src="Images/image30.png"width=700></p>
 
 <a name="nodetodash"></a>
 ### การเพิ่ม Node เข้าสู่ Dashboard
 
 1. เข้าที่การตั้งค่าและเลือกเมนู Surveillance Views Configuration (วงกลมสีแดง)
 
-<p align="center"><img src="Images/image31.png"width=500></p>
+<p align="center"><img src="Images/image31.png"width=700></p>
 
 2. ทำการกด Add หรือ Edit ตัว Surveillance Views ที่มีอยู่แล้ว
 
-<p align="center"><img src="Images/image32.png"width=500></p>
+<p align="center"><img src="Images/image32.png"width=700></p>
 
 3. กด Add และทำการเพิ่มชื่อ Surveillance Views ที่ Title รวมถึงทำการกำหนดเวลาในการ Refresh
 
-<p align="center"><img src="Images/image33.png"width=500></p>
+<p align="center"><img src="Images/image33.png"width=700></p>
 
 4. ทำการเพิ่ม Row และ Column ด้วยการกด Add
 
-<p align="center"><img src="Images/image34.png"width=500></p>
+<p align="center"><img src="Images/image34.png"width=700></p>
 
 5. ตั้งชื่อ Row และ Column และเลือกหมวดหมู่ที่ต้องการแสดง โดยจะต้องเลือก Row และ Column ให้ตรงกับหมวดหมู่ที่เราต้องการแสดงทั้งหมด และกด Save
 
 ข้อมูลจะแสดงสู่ Dashboard สามารถแสดงผลกราฟและแจ้งเตือนต่างๆได้
 
-<p align="center"><img src="Images/image35.png"width=500></p>
+<p align="center"><img src="Images/image35.png"width=700></p>
 
 <a name="emailnotify"></a>
 ### การเปิดใช้งานการแจ้งเตือนผ่าน Email
 
 1. เข้าไปที่การตั้งค่าและเลือกเมนู Configure Users, Groups and On-Call Roles (วงกลมสีแดง)
 
-<p align="center"><img src="Images/image36.png"width=500></p>
+<p align="center"><img src="Images/image36.png"width=700></p>
 
 2. เลือก Configure Users (วงกลมสีแดง)
 
-<p align="center"><img src="Images/image37.png"width=500></p>
+<p align="center"><img src="Images/image37.png"width=700></p>
 
 3. ในส่วนของตารางช่อง Modify ให้ทำการกดรูปดินสอกระดาษเพื่อแก้ไขในส่วนของข้อมูลการแจ้งเตือน
 
-<p align="center"><img src="Images/image38.png"width=500></p>
+<p align="center"><img src="Images/image38.png"width=700></p>
 
 4. ในส่วนของ Notification Information นั้นให้พิมพ์ E-mail ลงไปในส่วนของช่อง Email
 
-<p align="center"><img src="Images/image39.png"width=500></p>
+<p align="center"><img src="Images/image39.png"width=700></p>
 
 5. เลือก Notification Status ให้เป็น On และทำการกดปุ่ม Update
 
@@ -273,14 +273,14 @@ systemctl status sendmail
     ```md
     systemctl status ssh
     ```
-    <p align="center"><img src="Images/image41.png"width=500></p>
+    <p align="center"><img src="Images/image41.png"width=600></p>
 
     - หาก SSH ไม่ได้ทำงานอยู่ ให้ทำการเปิดการทำงานโดยใช้คำสั่งดังนี้ และเช็ค Status อีกรอบเพื่อความมั่นใจ
     ```md
     [1] systemctl start ssh             //เปิดการทำงาน SSH
     [2] systemctl status ssh            //เช็คสถานะการทำงานของ SSH
     ```
-    <p align="center"><img src="Images/image42.png"width=500></p>
+    <p align="center"><img src="Images/image42.png"width=600></p>
 
 - **การเชื่อม SSH เข้าสู่พอร์ตใน Container**
     - ทำการอนุญาต SSH ให้กับ UFW
@@ -304,4 +304,4 @@ systemctl status sendmail
 
     - ให้พิมพ์ "yes" เพื่อการเชื่อมต่อที่สมบูรณ์
 
-    <p align="center"><img src="Images/image45.png"width=500></p>
+    <p align="center"><img src="Images/image45.png"width=600></p>

@@ -14,6 +14,7 @@
     - [การตั้งค่าหมวดหมู่](#setting)
     - [การเพิ่ม Node เข้าสู่ Dashboard](#nodetodash)
     - [การตั้งค่าเสริม](#extension)
+    - [ผลที่ได้จากการ monitor](#result)
 
 
 <a name="installopennms"></a>
@@ -326,7 +327,7 @@ systemctl status sendmail
          ```md
          systemctl restart apache2 //รีสตาร์ทการทำงาน HTTP server
          ```
-    
+<a name="result"></a>   
 - **การติดตั้ง SSH**
     - ในการเปิดการใช้งาน SSH จะใช้คำสั่งดังนี้เพื่อเช็คสถานะของ SSH ก่อนว่าทำงานอยู่หรือไม่
     ```md
@@ -365,6 +366,7 @@ systemctl status sendmail
 
     <p align="center"><img src="Images/image45.png"width=600></p>
     
+
 - **ผลที่ได้จากการ Monitor**
     ![image](https://user-images.githubusercontent.com/116482588/211201366-a19dc1d5-c381-427d-9d98-f2b2ebd8d0cf.png)
     ![image](https://user-images.githubusercontent.com/116482588/211201494-33fb0922-33df-42f1-b88c-51e16d390ed2.png)

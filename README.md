@@ -270,7 +270,15 @@ systemctl status sendmail
 
 <a name="extension"></a>
 ### การตั้งค่าเสริม
-
+- **การตั้งค่า Protocol SNMP และ HTTP**
+    - เข้าสู่ตัว VM หรือ CT ที่ต้องการติดตั้ง
+    - ติดตั้ง SNMP
+        ```md
+        [1] apt update //อัปเดตแพ็คเกจ 
+        [2] apt install snmpd snmp //ลงแพ็คเกจ snmpd และ snmp
+        [3] systemctl start snmpd //เปิดการทำงาน snmp
+        [4] systemctl status snmpd //เปิดการทำงาน snmp
+        ```
 - **การติดตั้ง SSH**
     - ในการเปิดการใช้งาน SSH จะใช้คำสั่งดังนี้เพื่อเช็คสถานะของ SSH ก่อนว่าทำงานอยู่หรือไม่
     ```md

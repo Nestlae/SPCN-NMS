@@ -1,5 +1,7 @@
 # SPCN-NMS
-# การติดตั้ง การใช้งาน และการอ่านผลของเครื่องมือ OpenNMS Horizon
+<p align="center"><img src="Images/opennms-logo.png.png"width=600></p>
+
+# <p align="center">การติดตั้ง การใช้งาน และการอ่านผลของเครื่องมือ OpenNMS Horizon</p>
 - [ขั้นตอนที่ 1 - ติดตั้ง OpenNMS](#installopennms)
 - [ขั้นตอนที่ 2 - ติดตั้ง PostgreSQL](#installpostgres)
 - [ขั้นตอนที่ 3 - เริ่มใช้งาน OpenNMS](#startopennms)
@@ -8,7 +10,7 @@
     - [การเพิ่ม Node เพื่อใช้ในการ Monitoring](#monitoring)
     - [การเข้าไปดูข้อมูลของ Client](#clientinfo)
     - [การตั้งค่าหมวดหมู่](#setting)
-    - [การเพิ่ม Node เข้าสู่ Dashboard](nodetodash)
+    - [การเพิ่ม Node เข้าสู่ Dashboard](#nodetodash)
     - [การตั้งค่าเสริม](#extension)
 
 <a name="installopennms"></a>

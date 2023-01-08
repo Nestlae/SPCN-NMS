@@ -18,6 +18,11 @@
 - [ผู้จัดทำ](#manager)
 
 <a name="installopennms"></a>
+## ความต้องการของระบบ
+
+<p align="center"><img src="https://user-images.githubusercontent.com/116482588/211208124-071b01b4-52fa-49c7-8cd3-4158da2d15c9.png"width=500></p>
+
+<a name="installopennms"></a>
 ## ขั้นตอนที่ 1 - ติดตั้ง OpenNMS
 
 1. ทำการอัพเดท Packages ทั้งหมดก่อนที่จะทำการติดตั้ง OpenNMS โดยใช้คำสั่งดังนี้

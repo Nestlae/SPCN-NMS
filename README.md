@@ -19,7 +19,7 @@
 
 1. ทำการอัพเดท Packages ทั้งหมดก่อนที่จะทำการติดตั้ง OpenNMS โดยใช้คำสั่งดังนี้
 ```md
-apt-get upmonitoring
+apt-get update
 ```
 <p align="center"><img src="Images/image1.png"width=500></p>
 
@@ -38,7 +38,7 @@ apt-get install default-jdk gnupg gnupg2 gnupg1
 
 4. ทำการอัพเดท Packages อีกครั้ง โดยใช้คำสั่งดังนี้
 ```md
-apt upmonitoring
+apt update
 ```
 <p align="center"><img src="Images/image4.png"width=700></p>
 

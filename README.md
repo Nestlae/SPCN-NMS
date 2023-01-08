@@ -273,28 +273,57 @@ systemctl status sendmail
 - **การตั้งค่า Protocol SNMP และ HTTP**
     - เข้าสู่ตัว VM หรือ CT ที่ต้องการติดตั้ง
     - ติดตั้ง SNMP
+    
         ```md
         [1] apt update //อัปเดตแพ็คเกจ 
         [2] apt install snmpd snmp //ลงแพ็คเกจ snmpd และ snmp
         [3] systemctl start snmpd //เปิดการทำงาน snmp
         [4] systemctl status snmpd //เปิดการทำงาน snmp
         ```
-    - ตั้งค่าระบบ snmp ใน host
-        ```md
-        nano /etc/snmp/snmpd.conf //ทำการเปิดไฟล์ snmpd.conf
-        ```
-        ![image](https://user-images.githubusercontent.com/116482588/211189874-bce86ddd-611e-4ddd-adfa-425368be7170.png)
-        - แก้ไข agentaddress เป็น Ip address ของตัว VM หรือ CT
-        - เพิ่มข้อความ view systemonly included .1.3 เพื่อให้ protocol snmp เข้าถึงตัวข้อมูลได้มากยิ่งขึ้น
+    
+        - ตั้งค่าระบบ snmp ใน host
+    
+            ```md
+            nano /etc/snmp/snmpd.conf //ทำการเปิดไฟล์ snmpd.conf
+            ```
+    
+            ![image](https://user-images.githubusercontent.com/116482588/211189874-bce86ddd-611e-4ddd-adfa-425368be7170.png)
+            - แก้ไข agentaddress เป็น Ip address ของตัว VM หรือ CT
+            - เพิ่มข้อความ view systemonly included .1.3 เพื่อให้ protocol snmp เข้าถึงตัวข้อมูลได้มากยิ่งขึ้น
         
-        ![image](https://user-images.githubusercontent.com/116482588/211189973-6b968db6-9077-4d6a-8dbf-7044ec1f07b5.png)
-        - rocommunity <ชื่อ public> default -V systemonly
-        - rocommunity6 <ชื่อ public> default -V systemonly
-        - เพิ่ม disk เพื่อเข้าถึงการทำงานในไฟล์ เช่น disk / คือเข้าถึงไฟล์ใน root ทั้งหมด
-        ```md
-        systemctl restart snmpd //รีสตาร์ทการทำงาน snmp
-        ```
+            ![image](https://user-images.githubusercontent.com/116482588/211189973-6b968db6-9077-4d6a-8dbf-7044ec1f07b5.png)
+            - rocommunity <ชื่อ public> default -V systemonly
+            - rocommunity6 <ชื่อ public> default -V systemonly
+            - เพิ่ม disk เพื่อเข้าถึงการทำงานในไฟล์ เช่น disk / คือเข้าถึงไฟล์ใน root ทั้งหมด
+            
+            ```md
+            systemctl restart snmpd //รีสตาร์ทการทำงาน snmp
+            ```
     - ติดตั้ง HTTP
+        - เข้าสู่ตัว VM หรือ CT ที่ต้องการติดตั้ง
+        - ติดตั้ง HTTP server
+    
+        ```md
+        apt-get install apache2
+        ```
+        
+        - ตั้งค่าระบบ HTTP ใน host
+    
+            ```md
+            nano /etc/apache2/sites-available/000-default.conf //ทำการเปิดไฟล์ 000-default.conf
+            ```
+    
+            แก้ไขโดยการ
+                - นำ # ที่แถวของ ServerName ออก
+                ![image](https://user-images.githubusercontent.com/116482588/211190945-0706d976-db3d-4515-969f-a8a8d7c4b939.png)
+                ![image](https://user-images.githubusercontent.com/116482588/211190965-d2489e49-5c88-43bc-a102-7bb9fe57b10c.png)
+    
+                - แก้ไขชื่อตามที่ต้องการ
+                ![image](https://user-images.githubusercontent.com/116482588/211191024-f8488d63-f111-4779-adfb-4d6c43e2f897.png)
+                
+         ```md
+         systemctl restart apache2 //รีสตาร์ทการทำงาน HTTP server
+         ```
     
 - **การติดตั้ง SSH**
     - ในการเปิดการใช้งาน SSH จะใช้คำสั่งดังนี้เพื่อเช็คสถานะของ SSH ก่อนว่าทำงานอยู่หรือไม่

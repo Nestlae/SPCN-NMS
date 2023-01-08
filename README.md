@@ -15,7 +15,7 @@
     - [การเพิ่ม Node เข้าสู่ Dashboard](#nodetodash)
     - [การตั้งค่าเสริม](#extension)
     - [ผลที่ได้จากการ monitor](#result)
-
+- [ผู้จัดทำ](#manager)
 
 <a name="installopennms"></a>
 ## ขั้นตอนที่ 1 - ติดตั้ง OpenNMS

@@ -368,8 +368,7 @@ systemctl status sendmail
     
 <a name="result"></a> 
 ### ผลที่ได้จากการ monitor
-    ![image](https://user-images.githubusercontent.com/116482588/211201366-a19dc1d5-c381-427d-9d98-f2b2ebd8d0cf.png)
-    ![image](https://user-images.githubusercontent.com/116482588/211201494-33fb0922-33df-42f1-b88c-51e16d390ed2.png)
-
-    - ได้รับข้อมูลตามที่เจ้าของเครื่องได้ทำการตั้งค่าในการส่งข้อมูลผ่าน Protocol SNML โดยจะเป็นข้อมูลเกี่ยวกับการใช้งานต่างๆในระบบ ทั้งสถานะ ที่ดูได้ผ่านกราฟ 
-    - การแจ้งเตือนเมื่อมีการทำงานที่ผิดปกติเกิดขึ้นจากตัว Client
+![image](https://user-images.githubusercontent.com/116482588/211201366-a19dc1d5-c381-427d-9d98-f2b2ebd8d0cf.png)
+![image](https://user-images.githubusercontent.com/116482588/211201494-33fb0922-33df-42f1-b88c-51e16d390ed2.png)
+- ได้รับข้อมูลตามที่เจ้าของเครื่องได้ทำการตั้งค่าในการส่งข้อมูลผ่าน Protocol SNML โดยจะเป็นข้อมูลเกี่ยวกับการใช้งานต่างๆในระบบ ทั้งสถานะ ที่ดูได้ผ่านกราฟ 
+- การแจ้งเตือนเมื่อมีการทำงานที่ผิดปกติเกิดขึ้นจากตัว Client

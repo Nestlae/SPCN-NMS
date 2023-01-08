@@ -362,3 +362,4 @@ systemctl status sendmail
     - ให้พิมพ์ "yes" เพื่อการเชื่อมต่อที่สมบูรณ์
 
     <p align="center"><img src="Images/image45.png"width=600></p>
+    

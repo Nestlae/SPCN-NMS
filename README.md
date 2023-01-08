@@ -13,7 +13,7 @@
     - [การเข้าไปดูข้อมูลของ Client](#clientinfo)
     - [การตั้งค่าหมวดหมู่](#setting)
     - [การเพิ่ม Node เข้าสู่ Dashboard](#nodetodash)
-    - [การตั้งค่าเสริม](#extension)
+    - [การตั้งค่าส่วนเสริม](#extension)
     - [ผลที่ได้จากการ monitor](#result)
 - [ผู้จัดทำ](#manager)
 
@@ -272,7 +272,7 @@ systemctl status sendmail
 
 
 <a name="extension"></a>
-### การตั้งค่าเสริม
+### การตั้งค่าส่วนเสริม
 - **การตั้งค่า Protocol SNMP และ HTTP**
     - เข้าสู่ตัว VM หรือ CT ที่ต้องการติดตั้ง
     - ติดตั้ง SNMP

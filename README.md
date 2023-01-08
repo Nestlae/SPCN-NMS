@@ -1,5 +1,5 @@
 # SPCN-NMS
-<p align="center"><img src="Images/opennms-logo.png.png"width=600></p>
+<p align="center"><img src="Images/opennms-logo.png"width=600></p>
 
 # <p align="center">การติดตั้ง การใช้งาน และการอ่านผลของเครื่องมือ OpenNMS Horizon</p>
 - [ขั้นตอนที่ 1 - ติดตั้ง OpenNMS](#installopennms)
